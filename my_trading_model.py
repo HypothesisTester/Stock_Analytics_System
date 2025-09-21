@@ -1,11 +1,7 @@
 """
-Minorly adapted trading model implementation.
-
 This module contains the core logic for fetching price data, computing
 technical indicators, scraping news headlines, performing sentiment
-analysis and training an LSTM neural network.  Names and comments have
-been slightly adjusted from the original while preserving
-functionality.  All heavy data fetching and model training is guarded
+analysis and training an LSTM neural network. All heavy data fetching and model training is guarded
 to run only when this module is executed as a script and when the
 optional ``yfinance`` dependency is available.  When imported for
 testing, only function definitions and compatibility wrappers are
