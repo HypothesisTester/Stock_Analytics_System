@@ -1,0 +1,11 @@
+
+pandas
+numpy
+yfinance
+TA-Lib
+requests
+beautifulsoup4
+textblob
+keras
+tensorflow
+scikit-learn
