@@ -53,7 +53,7 @@ Confidence Score: Averaged at 0.66
 These numbers come from the default AAPL run spanning 2020-01-01 to 2021-01-01.
 
 ## Reading The Output
-- **Confidence Score for the stock** — Single snapshot combining indicators, sentiment, and the next-step LSTM forecast. Values stay between 0 and 1; numbers near 1 mean every input tilts bullish right now, while values near 0 flag a bearish or uncertain regime.
+- **Confidence Score for the stock** — Average of four pieces: RSI scaled to 0–1, MACD shifted/rescaled, mean headline sentiment (−1 to 1), and the predicted/last close price ratio. The MACD term and price ratio are unbounded, so the composite can move above 1 (very bullish) or dip below 0 (strongly bearish). Treat 1 as “strong positive”, with higher values signaling progressively more aggressive upside alignment.
 - **Out-of-sample MAE / RMSE** — Average absolute and squared price errors (in dollars) on the hold-out set. Lower is better; compare them to the share price to judge percentage error.
 - **Directional accuracy** — Share of test predictions that guessed the next day’s up/down move correctly. Around 50% is coin-flip; sustained improvement above that threshold signals real edge.
 
